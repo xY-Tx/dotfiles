@@ -45,7 +45,7 @@ return {
 		stretch = "Normal",
 		style = "Normal",
 	}),
-	font_size = 10,
+	font_size = 11,
 
 	-- Key settings
 	keys = {
