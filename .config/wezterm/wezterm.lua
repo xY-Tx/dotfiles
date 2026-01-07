@@ -36,7 +36,7 @@ return {
 	-- color_scheme = "Catppuccin-Macchiato",
 	color_scheme = "catppuccin-frappe",
 	-- color_scheme = "EverForest Dark (Gogh)",
-	window_background_opacity = 0.80,
+	window_background_opacity = 1.0,
 	macos_window_background_blur = 20,
 
 	-- Font settings
