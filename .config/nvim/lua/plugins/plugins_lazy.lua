@@ -73,12 +73,18 @@ return {
       vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
     end,
   },
-  -- markdownpreview
+  -- markview
   {
     "OXY2DEV/markview.nvim",
-    lazy = false,
-    -- Completion for `blink.cmp`
+    ft = "markdown",
     dependencies = { "saghen/blink.cmp" },
+    keys = {
+      {
+        "<leader>mt",
+        "<cmd>Markview toggle<CR>",
+        desc = "Toggle Markview preview",
+      },
+    },
   },
   -- nvim-autopairs
   {

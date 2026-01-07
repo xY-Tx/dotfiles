@@ -32,11 +32,11 @@ return {
 	show_tabs_in_tab_bar = true,
 
 	-- Color settings
-	-- color_scheme = "Ryuuko",
-	-- color_scheme = "Catppuccin-Macchiato",
-	color_scheme = "catppuccin-frappe",
+	color_scheme = "Ryuuko",
+	-- color_scheme = "catppuccin-macchiato",
+	-- color_scheme = "catppuccin-frappe",
 	-- color_scheme = "EverForest Dark (Gogh)",
-	window_background_opacity = 1.0,
+	window_background_opacity = 0.95,
 	macos_window_background_blur = 20,
 
 	-- Font settings
