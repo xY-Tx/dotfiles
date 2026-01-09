@@ -13,6 +13,14 @@ return {
 	-------------------------------
 	automatically_reload_config = true,
 	use_ime = true,
+	cursor_thickness = 2,
+	cursor_blink_rate = 0,
+	colors = {
+		cursor_fg = "black",
+		cursor_bg = "white",
+	},
+
+	-- ime_cursor_bg = "red",
 	default_cursor_style = "BlinkingBlock",
 	leader = {
 		key = "a",
