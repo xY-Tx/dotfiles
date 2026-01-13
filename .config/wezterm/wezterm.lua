@@ -66,8 +66,8 @@ return {
 	-------------------------------
 	-- Font settings
 	-------------------------------
-	-- font = wezterm.font("Moralerspace Krypton", {
-	font = wezterm.font("Moralerspace Argon", {
+	font = wezterm.font("Moralerspace Krypton", {
+		-- font = wezterm.font("Moralerspace Argon", {
 		weight = "Regular",
 		stretch = "Normal",
 		style = "Normal",
