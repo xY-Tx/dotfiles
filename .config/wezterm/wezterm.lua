@@ -57,8 +57,8 @@ return {
 	-- Color settings
 	-------------------------------
 	-- color_scheme = "Ryuuko",
-	color_scheme = "catppuccin-macchiato",
-	-- color_scheme = "catppuccin-frappe",
+	-- color_scheme = "catppuccin-macchiato",
+	color_scheme = "catppuccin-frappe",
 	-- color_scheme = "EverForest Dark (Gogh)",
 	window_background_opacity = 0.95,
 	macos_window_background_blur = 20,
@@ -66,7 +66,8 @@ return {
 	-------------------------------
 	-- Font settings
 	-------------------------------
-	font = wezterm.font("Moralerspace Krypton", {
+	-- font = wezterm.font("Moralerspace Krypton", {
+	font = wezterm.font("Moralerspace Argon", {
 		weight = "Regular",
 		stretch = "Normal",
 		style = "Normal",
