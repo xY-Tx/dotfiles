@@ -58,8 +58,12 @@ return {
 	-------------------------------
 	-- color_scheme = "Ryuuko",
 	-- color_scheme = "catppuccin-macchiato",
-	color_scheme = "catppuccin-frappe",
+	-- color_scheme = "catppuccin-frappe",
 	-- color_scheme = "EverForest Dark (Gogh)",
+	-- color_scheme = "Maia (Gogh)",
+	-- color_scheme = "Mariana",
+	-- color_scheme = "Material (Gogh)",
+	color_scheme = "Material (terminal.sexy)",
 	window_background_opacity = 0.95,
 	macos_window_background_blur = 20,
 
