@@ -90,7 +90,7 @@ return {
 			}),
 		},
 		{
-			key = "\\",
+			key = "]",
 			mods = "LEADER",
 			action = wezterm.action.SplitHorizontal({
 				domain = "CurrentPaneDomain",
