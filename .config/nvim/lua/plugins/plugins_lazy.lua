@@ -6,6 +6,12 @@ return {
     lazy = false,
     priority = 1000,
   },
+  {
+    "jpwol/thorn.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
   -- lualine
   {
     "nvim-lualine/lualine.nvim",
@@ -74,18 +80,18 @@ return {
     end,
   },
   -- markview
-  {
-    "OXY2DEV/markview.nvim",
-    ft = "markdown",
-    dependencies = { "saghen/blink.cmp" },
-    keys = {
-      {
-        "<leader>mt",
-        "<cmd>Markview toggle<CR>",
-        desc = "Toggle Markview preview",
-      },
-    },
-  },
+  -- {
+  --   "OXY2DEV/markview.nvim",
+  --   ft = "markdown",
+  --   dependencies = { "saghen/blink.cmp" },
+  --   keys = {
+  --     {
+  --       "<leader>mt",
+  --       "<cmd>Markview toggle<CR>",
+  --       desc = "Toggle Markview preview",
+  --     },
+  --   },
+  -- },
   -- nvim-autopairs
   {
     "windwp/nvim-autopairs",

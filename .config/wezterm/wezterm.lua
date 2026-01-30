@@ -63,7 +63,9 @@ return {
 	-- color_scheme = "Maia (Gogh)",
 	-- color_scheme = "Mariana",
 	-- color_scheme = "Material (Gogh)",
-	color_scheme = "Material (terminal.sexy)",
+	-- color_scheme = "Material (terminal.sexy)",
+	-- color_scheme = "PaleNightHC",
+	color_scheme = "Aardvark Blue",
 	window_background_opacity = 0.95,
 	macos_window_background_blur = 20,
 

@@ -33,7 +33,7 @@ vim.opt.hidden = true
 vim.opt.cursorline = true
 
 -- カーソルがある列を強調
-vim.opt.cursorcolumn = true
+vim.opt.cursorcolumn = false
 
 --------------------------------------------------------
 -- クリップボード共有
@@ -74,14 +74,15 @@ vim.opt.matchtime = 1
 -- 24 ビットカラーを使用
 vim.opt.termguicolors = true
 
--- ダークカラーを使用する
-vim.opt.background = "dark"
+-- ダーク(or ライト)カラーを使用する
+-- vim.opt.background = "dark"
+vim.opt.background = "light"
 
 --------------------------------------------------------
 -- インデント
 --------------------------------------------------------
 -- シフト幅を設定する
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 
 -- タブ幅を設定する
 vim.opt.tabstop = 2
