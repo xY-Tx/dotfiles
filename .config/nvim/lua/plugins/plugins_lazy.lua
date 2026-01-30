@@ -51,7 +51,7 @@ return {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       "MunifTanjim/nui.nvim",
       -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   `nvim-notify` is only needed, if you want to use the notifiation view.
       --   If not available, we use `mini` as the fallback
       "rcarriga/nvim-notify",
     },
@@ -99,5 +99,64 @@ return {
     config = true,
     -- use opts = {} for passing setup options
     -- this is equivalent to setup({}) function
+  },
+  -- mason
+  {
+    "mason-org/mason.nvim",
+    build = ":MasonUpdate",
+    config = true,
+  },
+
+  {
+    "mason-org/mason-lspconfig.nvim",
+  },
+
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    opts = {
+      ensure_installed = {
+        "bash-language-server",
+        "shfmt",
+        "shellcheck",
+      },
+    },
+  },
+  -- ====================
+  -- LSP (bash)
+  -- ====================
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        bashls = {
+          filetypes = { "sh", "bash" },
+          settings = {
+            bashIde = {
+              shellcheckPath = "shellcheck",
+              shfmt = {
+                path = "shfmt",
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+
+  -- ====================
+  -- Formatter (shfmt)
+  -- ====================
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        sh = { "shfmt" },
+      },
+      formatters = {
+        shfmt = {
+          prepend_args = { "-i", "2", "-ci", "-sr" },
+        },
+      },
+    },
   },
 }
