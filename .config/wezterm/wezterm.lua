@@ -36,13 +36,19 @@ return {
 	cell_width = 1.1,
 	line_height = 1.1,
 	adjust_window_size_when_changing_font_size = false,
+	-- window_padding = {
+	-- 	left = 0,
+	-- 	right = 0,
+	-- 	top = 0,
+	-- 	bottom = 0,
+	-- },
 
 	-------------------------------
 	-- Tab settings
 	-------------------------------
 	use_fancy_tab_bar = false,
 	tab_bar_at_bottom = false,
-	tab_max_width = 100,
+	-- tab_max_width = 100,
 	hide_tab_bar_if_only_one_tab = true,
 	show_tabs_in_tab_bar = true,
 	show_new_tab_button_in_tab_bar = false,
@@ -57,17 +63,17 @@ return {
 	-- Color settings
 	-------------------------------
 	-- color_scheme = "Ryuuko",
+	color_scheme = "Dracula",
 	-- color_scheme = "catppuccin-macchiato",
 	-- color_scheme = "catppuccin-frappe",
-	-- color_scheme = "EverForest Dark (Gogh)",
 	-- color_scheme = "Maia (Gogh)",
 	-- color_scheme = "Mariana",
 	-- color_scheme = "Material (Gogh)",
 	-- color_scheme = "Material (terminal.sexy)",
 	-- color_scheme = "PaleNightHC",
-	color_scheme = "Aardvark Blue",
-	window_background_opacity = 0.95,
-	macos_window_background_blur = 20,
+	-- color_scheme = "Aardvark Blue",
+	window_background_opacity = 0.60,
+	macos_window_background_blur = 80,
 
 	-------------------------------
 	-- Font settings

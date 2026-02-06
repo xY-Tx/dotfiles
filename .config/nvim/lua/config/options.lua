@@ -131,6 +131,9 @@ vim.opt.listchars = {
   nbsp = "␣", -- ノーブレークスペース
 }
 
+-- vim.opt.fillchars = { vert = " ", horiz = " " }
+-- vim.api.nvim_set_hl(0, "VertSplit", { bg = "NONE", fg = "NONE" })
+-- vim.api.nvim_set_hl(0, "WinSeparator", { bg = "NONE", fg = "NONE" })
 --------------------------------------------------------
 -- インタフェース
 --------------------------------------------------------

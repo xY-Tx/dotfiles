@@ -1,8 +1,8 @@
 -- colorscheme
-vim.cmd.colorscheme("thorn-light-cold") --thorn-light-cold | light-warm | dark-warm | dark-cold
+-- vim.cmd.colorscheme("thorn-dark-cold") --thorn-light-cold | light-warm | dark-warm | dark-cold
 -- vim.cmd.colorscheme("tokyonight-day")
--- vim.cmd.colorscheme("catppuccin-frappe")
--- vim.cmd.colorscheme("catppuccin-latte")
--- vim.cmd.colorscheme("tokyonight-storm")
--- vim.cmd.colorscheme("tokyonight-moon")
--- vim.cmd.colorscheme("evergarden-summer") -- winter | fall | summer | spring
+-- vim.cmd.colorscheme("catppuccin-frappe") -- frapp | latte | mocha | macchiato
+-- vim.cmd.colorscheme("tokyonight-day") -- tokyonight-storm | tokyonight-night | tokyonight-day | tokyonight-moon
+-- vim.cmd.colorscheme("evergarden-summer") -- evergarden-winter | fall | summer | spring
+-- vim.cmd.colorscheme("cyberdream") -- cyberdream | cyberdream-light
+vim.cmd.colorscheme("nord")
