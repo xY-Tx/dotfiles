@@ -72,8 +72,8 @@ return {
 	-- color_scheme = "Material (terminal.sexy)",
 	-- color_scheme = "PaleNightHC",
 	-- color_scheme = "Aardvark Blue",
-	window_background_opacity = 0.70,
-	macos_window_background_blur = 30,
+	window_background_opacity = 0.80,
+	macos_window_background_blur = 20,
 
 	-------------------------------
 	-- Font settings
