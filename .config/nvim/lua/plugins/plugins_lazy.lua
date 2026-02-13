@@ -71,6 +71,10 @@ return {
     priority = 1000,
     opts = {},
   },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+  },
   -- lualine
   {
     "nvim-lualine/lualine.nvim",

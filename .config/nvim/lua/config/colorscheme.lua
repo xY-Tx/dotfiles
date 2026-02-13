@@ -7,4 +7,5 @@
 -- vim.cmd.colorscheme("cyberdream") -- cyberdream | cyberdream-light
 -- vim.cmd.colorscheme("nord")
 -- vim.cmd.colorscheme("kanagawa-wave") -- wave | dragon | lotus
-vim.cmd.colorscheme("dracula") -- dracula | dracula-soft
+-- vim.cmd.colorscheme("dracula") -- dracula | dracula-soft
+vim.cmd.colorscheme("rose-pine-moon") -- main | moon | dawn
