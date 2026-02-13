@@ -7,23 +7,66 @@ return {
     priority = 1000,
   },
   {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("tokyonight").setup({
+        style = "storm", -- storm, moon, night, day
+        transparent = true, -- 透過を有効化
+        terminal_colors = true,
+        styles = {
+          comments = { italic = true },
+          keywords = { italic = true },
+          sidebars = "transparent", -- サイドバーも透過
+          floats = "transparent", -- フロートウィンドウも透過
+        },
+      })
+    end,
+  },
+
+  {
     "shaunsingh/nord.nvim",
     lazy = false,
     priority = 1000,
 
     config = function()
       -- カラースキームを読み込む前に設定を適用
+      vim.g.nord_transparent = true
       vim.g.nord_contrast = true
       vim.g.nord_borders = false
       vim.g.nord_disable_background = false
       vim.g.nord_cursorline_transparent = false
       vim.g.nord_italic = true
-      vim.g.nord_uniform_diff_background = true
+      -- vim.g.nord_uniform_diff_background = true
       vim.g.nord_bold = false
     end,
   },
   {
     "jpwol/thorn.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("kanagawa").setup({
+        transparent = false, -- 透過を有効化
+        terminal_colors = true,
+        -- theme = "wave", -- wave, dragon, lotus
+        -- background = {
+        --   dark = "wave",
+        --   light = "lotus",
+        -- },
+      })
+    end,
+  },
+  {
+    "Mofiqul/dracula.nvim",
     lazy = false,
     priority = 1000,
     opts = {},
@@ -35,11 +78,9 @@ return {
     config = function()
       require("lualine").setup({
         options = {
-          theme = "nord",
-          -- その他のオプションもここに追加できます
-          icons_enabled = true,
-          component_separators = { left = "", right = "" },
-          section_separators = { left = "", right = "" },
+          -- theme = "auto",
+          theme = "dracula",
+          -- theme = "nord",
         },
         sections = {
           lualine_a = { "mode" },
@@ -47,11 +88,23 @@ return {
           lualine_c = { "filename" },
           lualine_x = { "encoding", "fileformat", "filetype" },
           lualine_y = { "progress" },
-          lualine_z = { "location" },
+          lualine_z = {
+            "location",
+            {
+              function()
+                return os.date("%H:%M:%S")
+              end,
+            },
+          },
+        }, -- ⭐ sectionsはここで閉じる
+        tabline = { -- ⭐ tablineはsectionsの外
+          lualine_a = { "buffers" },
+          lualine_z = { "tabs" },
         },
       })
     end,
   },
+
   -- {
   --   "nvim-lualine/lualine.nvim",
   --   dependencies = {
@@ -60,6 +113,12 @@ return {
   --   opts = {},
   --   event = "VeryLazy",
   -- },
+  {
+    "tribela/transparent.nvim",
+    event = "VimEnter",
+    config = true,
+  },
+
   -- headline
   {
     "lukas-reineke/headlines.nvim",
@@ -82,27 +141,26 @@ return {
       })
     end,
   },
-  -- bufferline
-  {
-    "akinsho/bufferline.nvim",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-      "shaunsingh/nord.nvim",
-    },
-    config = function()
-      local highlights = require("nord").bufferline.highlights({
-        italic = true,
-        bold = true,
-      })
-
-      require("bufferline").setup({
-        options = {
-          separator_style = "thick",
-        },
-        highlights = highlights,
-      })
-    end,
-  },
+  -- bufferlin -- {
+  --   "akinsho/bufferline.nvim",
+  --   dependencies = {
+  --     "nvim-tree/nvim-web-devicons",
+  --     "shaunsingh/nord.nvim",
+  --   },
+  --   config = function()
+  --     local highlights = require("nord").bufferline.highlights({
+  --       italic = true,
+  --       bold = true,
+  --     })
+  --
+  --     require("bufferline").setup({
+  --       options = {
+  --         separator_style = "thick",
+  --       },
+  --       highlights = highlights,
+  --     })
+  --   end,
+  -- },
   -- hlchunk
   {
     "shellRaining/hlchunk.nvim",

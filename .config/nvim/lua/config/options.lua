@@ -75,8 +75,8 @@ vim.opt.matchtime = 1
 vim.opt.termguicolors = true
 
 -- ダーク(or ライト)カラーを使用する
--- vim.opt.background = "dark"
-vim.opt.background = "light"
+vim.opt.background = "dark"
+-- vim.opt.background = "light"
 
 --------------------------------------------------------
 -- インデント
@@ -110,7 +110,7 @@ vim.opt.wrap = false
 
 -- タブラインを表示
 -- （1:常に表示、2:タブが開かれたときに表示）
-vim.opt.showtabline = 2
+vim.opt.showtabline = 0
 
 -- ビープ音を表示する代わりに画面をフラッシュ
 vim.opt.visualbell = true

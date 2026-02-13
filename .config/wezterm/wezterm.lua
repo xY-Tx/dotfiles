@@ -5,7 +5,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
-require("format")
+-- require("format")
 
 return {
 	-------------------------------
@@ -14,11 +14,11 @@ return {
 	automatically_reload_config = true,
 	use_ime = true,
 	cursor_thickness = 2,
-	cursor_blink_rate = 0,
-	colors = {
-		cursor_fg = "black",
-		cursor_bg = "white",
-	},
+	cursor_blink_rate = 800,
+	-- colors = {
+	-- 	cursor_fg = "black",
+	-- 	cursor_bg = "white",
+	-- },
 
 	-- ime_cursor_bg = "red",
 	default_cursor_style = "BlinkingBlock",
@@ -31,8 +31,8 @@ return {
 	-------------------------------
 	-- Window settings
 	-------------------------------
-	initial_cols = 120,
-	initial_rows = 40,
+	initial_cols = 140,
+	initial_rows = 60,
 	cell_width = 1.1,
 	line_height = 1.1,
 	adjust_window_size_when_changing_font_size = false,
@@ -48,30 +48,58 @@ return {
 	-------------------------------
 	use_fancy_tab_bar = false,
 	tab_bar_at_bottom = false,
-	-- tab_max_width = 100,
+	tab_max_width = 100,
 	hide_tab_bar_if_only_one_tab = true,
 	show_tabs_in_tab_bar = true,
 	show_new_tab_button_in_tab_bar = false,
-	-- window_decorations = "RESIZE",
+	-- show_close_tab_button_in_tabs = false,
+	window_decorations = "RESIZE",
+	window_frame = {
+		inactive_titlebar_bg = "none",
+		active_titlebar_bg = "none",
+	},
+	-- window_background_gradient = {
+	-- 	colors = { "#555555" },
+	-- },
 	-- colors = {
 	-- 	tab_bar = {
 	-- 		inactive_tab_edge = "none",
 	-- 	},
 	-- },
 
+	wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+		local background = "#5c6d74"
+		local foreground = "#FFFFFF"
+
+		if tab.is_active then
+			background = "#ae8b2d"
+			foreground = "#FFFFFF"
+		end
+
+		local title = "   " .. wezterm.truncate_right(tab.active_pane.title, max_width - 1) .. "   "
+
+		return {
+			{ Background = { Color = background } },
+			{ Foreground = { Color = foreground } },
+			{ Text = title },
+		}
+	end),
+
 	-------------------------------
 	-- Color settings
 	-------------------------------
 	-- color_scheme = "Ryuuko",
-	color_scheme = "Dracula",
+	-- color_scheme = "Dracula",
+	-- color_scheme = "Tokyo Night",
 	-- color_scheme = "catppuccin-macchiato",
 	-- color_scheme = "catppuccin-frappe",
+	-- color_scheme = "catppuccin-mocha",
 	-- color_scheme = "Maia (Gogh)",
 	-- color_scheme = "Mariana",
 	-- color_scheme = "Material (Gogh)",
 	-- color_scheme = "Material (terminal.sexy)",
 	-- color_scheme = "PaleNightHC",
-	-- color_scheme = "Aardvark Blue",
+	color_scheme = "Aardvark Blue",
 	window_background_opacity = 0.80,
 	macos_window_background_blur = 20,
 
@@ -108,6 +136,11 @@ return {
 			key = "[",
 			mods = "CTRL",
 			action = wezterm.action.PaneSelect,
+		},
+		{
+			key = "f",
+			mods = "CMD|SHIFT",
+			action = wezterm.action.ToggleFullScreen,
 		},
 	},
 }
