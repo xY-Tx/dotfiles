@@ -100,7 +100,7 @@ return {
 	-- color_scheme = "Material (terminal.sexy)",
 	-- color_scheme = "PaleNightHC",
 	color_scheme = "Aardvark Blue",
-	window_background_opacity = 0.80,
+	window_background_opacity = 0.65,
 	macos_window_background_blur = 20,
 
 	-------------------------------
