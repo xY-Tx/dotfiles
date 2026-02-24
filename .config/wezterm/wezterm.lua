@@ -99,7 +99,12 @@ return {
 	-- color_scheme = "Material (Gogh)",
 	-- color_scheme = "Material (terminal.sexy)",
 	-- color_scheme = "PaleNightHC",
-	color_scheme = "Aardvark Blue",
+	-- color_scheme = "Aardvark Blue",
+	-- color_scheme = "Neon",
+	-- color_scheme = "Neon (terminal.sexy)",
+	-- color_scheme = "Neon Night (Gogh)",
+	color_scheme = "Outrun Dark (base16)",
+	-- color_scheme = "Relaxed",
 	window_background_opacity = 0.75,
 	macos_window_background_blur = 20,
 
