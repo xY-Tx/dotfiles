@@ -31,8 +31,8 @@ return {
 	-------------------------------
 	-- Window settings
 	-------------------------------
-	initial_cols = 140,
-	initial_rows = 60,
+	initial_cols = 230,
+	initial_rows = 80,
 	cell_width = 1.1,
 	line_height = 1.1,
 	adjust_window_size_when_changing_font_size = false,
