@@ -31,7 +31,7 @@ return {
 	-------------------------------
 	-- Window settings
 	-------------------------------
-	initial_cols = 230,
+	initial_cols = 240,
 	initial_rows = 80,
 	cell_width = 1.1,
 	line_height = 1.1,
@@ -86,7 +86,7 @@ return {
 	end),
 
 	-------------------------------
-	-- Color settings
+	-- Color setting
 	-------------------------------
 	-- color_scheme = "Ryuuko",
 	-- color_scheme = "Dracula",
@@ -103,9 +103,11 @@ return {
 	-- color_scheme = "Neon",
 	-- color_scheme = "Neon (terminal.sexy)",
 	-- color_scheme = "Neon Night (Gogh)",
-	color_scheme = "Outrun Dark (base16)",
-	-- color_scheme = "Relaxed",
-	window_background_opacity = 0.75,
+	-- color_scheme = "Outrun Dark (base16)",
+	-- color_scheme = "Pandora",
+	-- color_scheme = "Omni (Gogh)",
+	color_scheme = "Nova (base16)",
+	-- window_background_opacity = 0.95,
 	macos_window_background_blur = 20,
 
 	-------------------------------
