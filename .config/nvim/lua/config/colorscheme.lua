@@ -1,5 +1,5 @@
 -- colorscheme
-vim.cmd.colorscheme("thorn-light-warm") --thorn-light-cold | light-warm | dark-warm | dark-cold
+vim.cmd.colorscheme("thorn-dark-cold") --thorn-light-cold | light-warm | dark-warm | dark-cold
 -- vim.cmd.colorscheme("tokyonight-day")
 -- vim.cmd.colorscheme("catppuccin-frappe") -- frapp | latte | mocha | macchiato
 -- vim.cmd.colorscheme("tokyonight-storm") -- tokyonight-storm | tokyonight-night | tokyonight-day | tokyonight-moon
