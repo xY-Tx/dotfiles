@@ -117,11 +117,11 @@ return {
   --   opts = {},
   --   event = "VeryLazy",
   -- },
-  {
-    "tribela/transparent.nvim",
-    event = "VimEnter",
-    config = true,
-  },
+  -- {
+  --   "tribela/transparent.nvim",
+  --   event = "VimEnter",
+  --   config = true,
+  -- },
 
   -- headline
   {
