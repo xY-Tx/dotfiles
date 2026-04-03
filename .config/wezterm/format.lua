@@ -1,26 +1,30 @@
 local wezterm = require("wezterm")
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover)
-	local bg_active = "#f2b3b3"
-	local bg_inactive = "#1f2937"
-	local bg_hover = "#374151"
+	local bg_active = "#D86B6B"
+	local fg_active = "#2F1010"
 
-	local fg_active = "#414a7d"
-	local fg_inactive = "#9ca3af"
+	local bg_inactive = "#D5F0D0"
+	local fg_inactive = "#2F522F"
+
+	local bg_hover = "#BFE06D"
+	local fg_hover = "#394715"
 
 	local bg
+	local fg
+
 	if tab.is_active then
 		bg = bg_active
+		fg = fg_active
 	elseif hover then
 		bg = bg_hover
+		fg = fg_hover
 	else
 		bg = bg_inactive
+		fg = fg_inactive
 	end
 
-	local fg = tab.is_active and fg_active or fg_inactive
-
-	-- ★ 全タブ共通の左右余白
-	local pad = "  " -- ← 1文字分（2にすると広め）
+	local pad = "  "
 
 	return {
 		{ Background = { Color = bg } },
