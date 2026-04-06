@@ -104,9 +104,9 @@ return {
 	-- color_scheme = "Neon (terminal.sexy)",
 	-- color_scheme = "Neon Night (Gogh)",
 	-- color_scheme = "Outrun Dark (base16)",
-	-- color_scheme = "Pandora",
+	color_scheme = "Pandora",
 	-- color_scheme = "Omni (Gogh)",
-	color_scheme = "Nova (base16)",
+	-- color_scheme = "Nova (base16)",
 	-- window_background_opacity = 0.95,
 	macos_window_background_blur = 20,
 
