@@ -1,14 +1,23 @@
 local wezterm = require("wezterm")
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover)
-	local bg_active = "#D86B6B"
-	local fg_active = "#2F1010"
+	-- local bg_active = "#D86B6B"
+	-- local fg_active = "#2F1010"
+	--
+	-- local bg_inactive = "#D5F0D0"
+	-- local fg_inactive = "#2F522F"
+	--
+	-- local bg_hover = "#BFE06D"
+	-- local fg_hover = "#394715"
 
-	local bg_inactive = "#D5F0D0"
-	local fg_inactive = "#2F522F"
+	local bg_active = "#FC9986"
+	local fg_active = "#032653"
 
-	local bg_hover = "#BFE06D"
-	local fg_hover = "#394715"
+	local bg_inactive = "#032653"
+	local fg_inactive = "#FC9986"
+
+	local bg_hover = "#103560"
+	local fg_hover = "#FC9986"
 
 	local bg
 	local fg
