@@ -103,7 +103,7 @@ vim.opt.smartindent = true
 vim.opt.number = true
 
 -- 相対行番号を表示
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- テキストの自動折り返しを無効に
 vim.opt.wrap = false

@@ -107,7 +107,7 @@ return {
 	color_scheme = "Pandora",
 	-- color_scheme = "Omni (Gogh)",
 	-- color_scheme = "Nova (base16)",
-	-- window_background_opacity = 0.95,
+	window_background_opacity = 0.92,
 	macos_window_background_blur = 20,
 
 	-------------------------------
