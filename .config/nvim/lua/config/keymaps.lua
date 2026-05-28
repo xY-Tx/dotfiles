@@ -1,16 +1,16 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- Keymaps are loaded on LazyVim's VeryLazy event.
 
--- jjでインサートモードからノーマルモードに変更
-vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
+local map = vim.keymap.set
 
-vim.keymap.set("n", "<leader>f", function()
-  require("conform").format()
-end, { desc = "Format (shfmt)" })
+-- Leave insert mode quickly.
+map("i", "jj", "<Esc>", { desc = "Exit insert mode", silent = true })
 
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-vim.keymap.set("n", "K", vim.lsp.buf.hover)
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+-- Formatting. Keep your original <leader>f muscle memory.
+map({ "n", "v" }, "<leader>f", function()
+  require("conform").format({ async = true, lsp_format = "fallback" })
+end, { desc = "Format buffer or selection" })
 
--- vim.keymap.set("n", "<leader>tt", ":TransparentToggle<CR>", { desc = "Toggle transparency" })
+-- LSP helpers. LazyVim already provides richer mappings; these keep your preferred basics explicit.
+map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+map("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
+map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
